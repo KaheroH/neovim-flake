@@ -18,6 +18,7 @@
     self,
     nixpkgs,
     flake-utils,
+<<<<<<< HEAD
     gen-luarc,
     ...
   }: let
@@ -27,11 +28,20 @@
       "x86_64-darwin"
       "aarch64-darwin"
     ];
+=======
+    ...
+  }: let
+    systems = builtins.attrNames nixpkgs.legacyPackages;
+>>>>>>> kickstarter-nix/main
 
     # This is where the Neovim derivation is built.
     neovim-overlay = import ./nix/neovim-overlay.nix {inherit inputs;};
   in
+<<<<<<< HEAD
     flake-utils.lib.eachSystem supportedSystems (system: let
+=======
+    flake-utils.lib.eachSystem systems (system: let
+>>>>>>> kickstarter-nix/main
       pkgs = import nixpkgs {
         inherit system;
         overlays = [
@@ -40,7 +50,11 @@
           # This adds a function can be used to generate a .luarc.json
           # containing the Neovim API all plugins in the workspace directory.
           # The generated file can be symlinked in the devShell's shellHook.
+<<<<<<< HEAD
           gen-luarc.overlays.default
+=======
+          inputs.gen-luarc.overlays.default
+>>>>>>> kickstarter-nix/main
         ];
       };
       shell = pkgs.mkShell {
@@ -51,10 +65,19 @@
           nil
           stylua
           luajitPackages.luacheck
+<<<<<<< HEAD
+=======
+          nvim-dev
+>>>>>>> kickstarter-nix/main
         ];
         shellHook = ''
           # symlink the .luarc.json generated in the overlay
           ln -fs ${pkgs.nvim-luarc-json} .luarc.json
+<<<<<<< HEAD
+=======
+          # allow quick iteration of lua configs
+          ln -Tfns $PWD/nvim ~/.config/nvim-dev
+>>>>>>> kickstarter-nix/main
         '';
       };
     in {
