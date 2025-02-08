@@ -96,8 +96,6 @@ in {
     inherit extraPackages;
   };
 
-<<<<<<< HEAD
-=======
   # This is meant to be used within a devshell.
   # Instead of loading the lua Neovim configuration from
   # the Nix store, it is loaded from $XDG_CONFIG_HOME/nvim-dev
@@ -108,7 +106,6 @@ in {
     wrapRc = false;
   };
 
->>>>>>> kickstarter-nix/main
   # This can be symlinked in the devShell's shellHook
   nvim-luarc-json = final.mk-luarc-json {
     plugins = all-plugins;

@@ -261,11 +261,7 @@ git merge upstream/main --allow-unrelated-histories
 
 When your neovim setup is a nix derivation, editing your config
 demands a different workflow than you are used to without nix.
-<<<<<<< HEAD
-Here is how I usually do it:
-=======
 A quick and easy way to test your changes:
->>>>>>> kickstarter-nix/main
 
 - Perform modifications and stage any new files[^2].
 - Run `nix run /path/to/neovim/#nvim`
@@ -277,26 +273,6 @@ A quick and easy way to test your changes:
 This requires a rebuild of the `nvim` derivation, but has the advantage
 that if anything breaks, it's only broken during your test run.
 
-<<<<<<< HEAD
-If you want an impure, but faster feedback loop,
-you can use `$XDG_CONFIG_HOME/$NVIM_APPNAME`[^3], where `$NVIM_APPNAME` 
-defaults to `nvim` if the `appName` attribute is not set 
-in the `mkNeovim` function.
-
-[^3]: Assuming Linux. Refer to `:h initialization` for Darwin.
-
-This has one caveat: The wrapper which nix generates for the derivation
-calls `nvim` with `-u /nix/store/path/to/generated-init.lua`.
-So it won't source a local `init.lua` file.
-To work around this, you can put scripts in the `plugin` or `after/plugin` directory.
-
-> [!TIP]
->
-> If you are starting out, and want to test things without having to
-> stage or commit new files for changes to take effect,
-> you can remove the `.git` directory and re-initialize it (`git init`)
-> when you are done.
-=======
 When developing locally you might want to have a faster feedback loop.
 Normally the whole Neovim configuration is copied into the store and 
 the wrapper which nix generates for the derivation calls `nvim`
@@ -315,7 +291,6 @@ you can run Neovim with `nvim-dev` to automatically reload your lua configuratio
 
 [^3]: Assuming Linux. Refer to `:h initialization` for Darwin.
 
->>>>>>> kickstarter-nix/main
 
 ## :link: Alternative / similar projects
 

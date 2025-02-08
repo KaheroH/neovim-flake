@@ -36,10 +36,7 @@ with lib;
     viAlias ? appName == null || appName == "nvim",
     # Add a "vim" binary to the build output as an alias?
     vimAlias ? appName == null || appName == "nvim",
-<<<<<<< HEAD
-=======
     wrapRc ? true,
->>>>>>> kickstarter-nix/main
   }: let
     # This is the structure of a plugin definition.
     # Each plugin in the `plugins` argument list can also be defined as this attrset
@@ -199,11 +196,7 @@ with lib;
           + extraMakeWrapperLuaCArgs
           + " "
           + extraMakeWrapperLuaArgs;
-<<<<<<< HEAD
-        wrapRc = true;
-=======
         wrapRc = wrapRc;
->>>>>>> kickstarter-nix/main
       });
 
     isCustomAppName = appName != null && appName != "nvim";
