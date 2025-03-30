@@ -90,7 +90,6 @@ with final.pkgs.lib; let
     # language servers, etc.
     lua-language-server
     nil # nix LSP
-    clangd # c LSP
     jdt-language-server # Java LSP
   ];
 in {
