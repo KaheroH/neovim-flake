@@ -8,11 +8,6 @@
 
     # Add bleeding-edge plugins here.
     # They can be updated with `nix flake update` (make sure to commit the generated flake.lock)
-    lazy-nvim = {
-      url = "github:folke/lazy.nvim";
-      flake = false;
-    };
-
   };
 
   outputs = inputs @ {

@@ -1,11 +1,13 @@
+require("plugins.lazy")
+
 local cmd = vim.cmd
 local fn = vim.fn
 local opt = vim.o
 local g = vim.g
 
 -- <leader> key. Defaults to `\`. Some people prefer space.
--- g.mapleader = ' '
--- g.maplocalleader = ' '
+g.mapleader = ' '
+g.maplocalleader = ' '
 
 opt.compatible = false
 
@@ -94,7 +96,7 @@ vim.diagnostic.config {
 
 g.editorconfig = true
 
-vim.opt.colorcolumn = '100'
+vim.opt.colorcolumn = '120'
 
 -- Native plugins
 cmd.filetype('plugin', 'indent', 'on')
