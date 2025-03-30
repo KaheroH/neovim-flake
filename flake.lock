@@ -119,6 +119,22 @@
         "type": "github"
       }
     },
+    "lazy-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1740511197,
+        "narHash": "sha256-nQ8PR9DTdzg6Z2rViuVD6Pswc2VvDQwS3uMNgyDh5ls=",
+        "owner": "folke",
+        "repo": "lazy.nvim",
+        "rev": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "folke",
+        "repo": "lazy.nvim",
+        "type": "github"
+      }
+    },
     "luvit-meta": {
       "flake": false,
       "locked": {
@@ -199,6 +215,7 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "gen-luarc": "gen-luarc",
+        "lazy-nvim": "lazy-nvim",
         "nixpkgs": "nixpkgs_2"
       }
     },
