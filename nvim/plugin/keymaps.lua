@@ -15,8 +15,8 @@ keymap.set('n', '<C-k>', '<C-w>k', {noremap = true, silent = true})
 keymap.set('n', '<C-l>', '<C-w>l', {noremap = true, silent = true})
 
 -- Terminal
-vim.keymap.set('n', '<Leader>v', ':vsplit | term', { noremap = true, silent = true })
-vim.keymap.set('n', '<Leader>h', ':split | term', { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>v', ':vsplit | term<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<Leader>h', ':split | term<CR>', { noremap = true, silent = true })
 
 -- Yank from current position till end of current line
 keymap.set('n', 'Y', 'y$', { silent = true, desc = '[Y]ank to end of line' })
