@@ -91,6 +91,7 @@ with final.pkgs.lib; let
     lua-language-server
     nil # nix LSP
     jdt-language-server # Java LSP
+    clang-tools
   ];
 in {
   # This is the neovim derivation
